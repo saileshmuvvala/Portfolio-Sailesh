@@ -1,0 +1,32 @@
+/* Project.css */
+.project-container {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transition for the hover effect */
+}
+
+.badge-advanced {
+    background-color: #6db56d; /* Example color */
+    color: #fff; /* Example text color */
+}
+
+.view-more {
+    margin-top: 12px;
+}
+
+.project-container:hover {
+    transform: scale(1.05); /* Scale up the project card on hover */
+}
+
+.project-details {
+    transition: transform 0.3s ease; /* Transition for the hover effect */
+}
+
+.project-container:hover .project-details {
+    transform: translateZ(10px); /* Move the project details slightly forward on hover */
+}
+
+/* Add more styles as needed */

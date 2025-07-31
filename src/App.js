@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+// import Projects from "./components/Projects";
+import Header from "./components/Header";
+import BodyContents from "./components/BodyContents";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      showProfile : true
+    };
+  }
+  toggleButton = () => {
+    this.setState({ showProfile: !this.state.showProfile})
+  }
+
+  render(){
+    return(
+      <div>
+        {/* {this.state.showProfile ? <p> I'm showing Sudhir Gupta</p> : <p> I'm Hidden</p>}
+        <button onClick={this.toggleButton}>{this.state.showProfile ? <span>Hide Profile</span> : <span>Show Profile</span>}</button> */}
+        <Header />
+        <BodyContents />
+    
+        {/* <Projects /> */}
+      </div>
+    )
+  }
 }
 
 export default App;
