@@ -1,5 +1,5 @@
 import React from "react";
-import "./Education.css"; // Import a separate CSS file for styling
+import "./Education.css"; // Separate CSS file for styling
 
 const Education = () => {
   return (
@@ -8,12 +8,19 @@ const Education = () => {
         <h2 className="heading">Education</h2>
         <div className="content">
           <div className="item">
-            <div className="icon">&#127891;</div>
+            <div className="icon" role="img" aria-label="graduation cap"></div>
             <div className="details">
-              <h3 className="title">MS Analytical Chemistry</h3>
+              <h3 className="title">Master of Science</h3>
               <h4 className="university">
-                CRR (Adhi Kavi Nannaya University){" "}
-                <span className="year">(2015-2019)</span>
+                CRR (Adikavi Nannaya University){" "}
+                <span className="year">(2018-2020)</span>
+              </h4>
+            </div>
+            <div className="details">
+              <h3 className="title">Bachlore of Science</h3>
+              <h4 className="university">
+                CRR (Adikavi Nannaya University){" "}
+                <span className="year">(2016-2018)</span>
               </h4>
             </div>
           </div>

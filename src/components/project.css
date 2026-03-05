@@ -1,32 +1,57 @@
-/* Project.css */
 .project-container {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Transition for the hover effect */
-}
-
-.badge-advanced {
-    background-color: #6db56d; /* Example color */
-    color: #fff; /* Example text color */
-}
-
-.view-more {
-    margin-top: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .project-container:hover {
-    transform: scale(1.05); /* Scale up the project card on hover */
+  transform: scale(1.05);
 }
 
 .project-details {
-    transition: transform 0.3s ease; /* Transition for the hover effect */
+  transition: transform 0.3s ease;
 }
 
 .project-container:hover .project-details {
-    transform: translateZ(10px); /* Move the project details slightly forward on hover */
+  transform: translateZ(10px);
 }
 
-/* Add more styles as needed */
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.badge-advanced {
+  background-color: #6db56d;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.view-more {
+  margin-top: 12px;
+}
+
+.more-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+}
+
+.read-more {
+  cursor: pointer;
+  color: #007bff;
+  margin-left: 4px;
+}
+
+.read-more a {
+  text-decoration: none;
+  font-weight: 500;
+}

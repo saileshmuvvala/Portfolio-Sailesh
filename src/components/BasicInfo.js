@@ -1,5 +1,5 @@
 import React from "react";
-import "./BasicInfo.css"; // Import a separate CSS file for styling
+import "./BasicInfo.css"; // Styling for basic info section
 
 const BasicInfo = () => {
   return (
@@ -14,25 +14,33 @@ const BasicInfo = () => {
               <span className="value">Eluru, AP, India</span>
             </li>
             <li>
-              <i className="fas fa-mobile icon"></i>
+              <i className="fas fa-mobile-alt icon"></i>
               <span className="label">Contact No:</span>
-              <span className="value">+91 9908617686</span>
+              <span className="value">
+                <a href="tell:9908617686">9908617686</a>
+              </span>
             </li>
             <li>
               <i className="fas fa-envelope icon"></i>
               <span className="label">Email:</span>
               <span className="value">
                 <a href="mailto:muvvalasailesh6@gmail.com">
-                  kalyan15meka@gmail.com
+                  muvvalasailesh6@gmail.com
                 </a>
               </span>
             </li>
-            {/* Uncomment the following lines for website information */}
-            {/* <li>
-                            <i className="fas fa-link icon"></i>
-                            <span className="label">Website:</span>
-                            <span className="value"><a href="https://www.website.com" target="_blank" rel="noopener noreferrer">https://www.website.com</a></span>
-                        </li> */}
+            {/* Optional: Add website if needed */}
+            {/*
+            <li>
+              <i className="fas fa-link icon"></i>
+              <span className="label">Website:</span>
+              <span className="value">
+                <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                  https://www.website.com
+                </a>
+              </span>
+            </li>
+            */}
           </ul>
         </div>
       </div>

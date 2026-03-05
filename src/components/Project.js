@@ -1,51 +1,85 @@
 import React, { useState } from "react";
-import "./project.css"; // Import a separate CSS file for styling
+import "./project.css";
 
-const Project = (props) => {
-    const { title, client, description, image, link, technologyUsed, functionalArea } = props.project;
-    const technologies = technologyUsed.split(',').map(tech => tech.trim());
-    const [showFullDescription, setShowFullDescription] = useState(false);
+const Project = ({ project }) => {
+  const {
+    title,
+    client,
+    description,
+    image,
+    link,
+    technologyUsed,
+    functionalArea,
+  } = project;
 
-    const truncatedDescription = description.substring(0, 100); // Adjust the character limit
+  const technologies = (technologyUsed || "")
+    .split(",")
+    .map((tech) => tech.trim());
+  const [showFullDescription, setShowFullDescription] = useState(false);
+  const truncatedDescription = description.substring(0, 100);
 
-    const toggleDescription = () => {
-        setShowFullDescription(!showFullDescription);
-    };
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
 
-    return (
-        <div className="item row project-container">
-            <a className="col-md-4 col-12" href={link} target="_blank" rel="noopener noreferrer">
-                <img className="img-fluid project-image" src={image} alt={title} />
-            </a>
-            <div className="desc col-md-8 col-12 project-details">
-                <h3 className="title">
-                    <a href={link} target="_blank" rel="noopener noreferrer">{title}</a>
-                    <span className="small place"> - {client}</span>
-                </h3>
-                {functionalArea && <p className="mb-2"><strong>Functional Area:</strong> {functionalArea}</p>}
-                <p className="mb-2">
-                    {showFullDescription ? description : truncatedDescription}
-                    {!showFullDescription && (
-                        <span className="read-more" onClick={toggleDescription}>
-                            ...<a href="#readmore">Read more</a>
-                        </span>
-                    )}
-                    {showFullDescription && (
-                        <span className="read-more" onClick={toggleDescription}>
-                            <a href="#readless">Read less</a>
-                        </span>
-                    )}
-                </p>
-                <div className="technologies">
-                    <strong>Stack of Technologies used: </strong>
-                    {technologies.map((tech, index) => (
-                        <span key={index} className="badge badge-advanced mr-2">{tech}</span>
-                    ))}
-                </div>
-                <p className="view-more"><a className="more-link" href={link} target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i>VIEW</a></p>
-            </div>
+  return (
+    <div className="item row project-container">
+      <a
+        className="col-md-4 col-12"
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="img-fluid project-image" src={image} alt={title} />
+      </a>
+
+      <div className="desc col-md-8 col-12 project-details">
+        <h3 className="title">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+          {client && <span className="small place"> - {client}</span>}
+        </h3>
+
+        {functionalArea && (
+          <p className="mb-2">
+            <strong>Functional Area:</strong> {functionalArea}
+          </p>
+        )}
+
+        <p className="mb-2">
+          {showFullDescription ? description : truncatedDescription}
+          {description.length > 100 && (
+            <span className="read-more" onClick={toggleDescription}>
+              <a href="#toggle">
+                {showFullDescription ? " Read less" : "... Read more"}
+              </a>
+            </span>
+          )}
+        </p>
+
+        <div className="technologies">
+          <strong>Tech Stack: </strong>
+          {technologies.map((tech, index) => (
+            <span key={index} className="badge badge-advanced mr-2">
+              {tech}
+            </span>
+          ))}
         </div>
-    );
-}
+
+        <p className="view-more">
+          <a
+            className="more-link"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-external-link-alt"></i> VIEW
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Project;

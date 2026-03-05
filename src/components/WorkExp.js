@@ -1,5 +1,5 @@
 import React from "react";
-import "./WorkExperience.css"; // Import a separate CSS file for styling
+import "./WorkExperience.css";
 
 const WorkExperience = () => {
   return (
@@ -8,13 +8,15 @@ const WorkExperience = () => {
         <h2 className="heading">Work Experience</h2>
         <div className="content">
           <div className="item">
-            <div className="icon">&#128188;</div>
+            <div className="icon" role="img" aria-label="briefcase">
+              &#128188;
+            </div>
             <div className="details">
               <h4 className="designation">Senior Process Executive</h4>
               <h5 className="company">
-                Cognizant Technology & Solutions Pvt Ltd, Remote
+                Cognizant Technology Solutions Pvt Ltd
               </h5>
-              <span className="year">(Mar '2020 - Oct '2024)</span>
+              <span className="year">(Mar 2020 - Oct 2024)</span>
             </div>
           </div>
         </div>
