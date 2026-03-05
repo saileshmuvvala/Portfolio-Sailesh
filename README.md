@@ -8,7 +8,7 @@ The application is structured using reusable React components and organized data
 
 ## Live Demo
 
-Add your deployed portfolio link here.
+https://portfolio-sailesh-muvvala.netlify.app/
 
 ---
 
