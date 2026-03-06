@@ -17,7 +17,7 @@ const SKILLS = [
     id: 3,
     name: "Database",
     rating: "70%",
-    description: "MongoDB, Mongoose",
+    description: "MongoDB",
     icon: "fas fa-database", // Font Awesome Database icon
   },
   {

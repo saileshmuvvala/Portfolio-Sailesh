@@ -11,7 +11,7 @@ const BasicInfo = () => {
             <li>
               <i className="fas fa-map-marker-alt icon"></i>
               <span className="label">Location:</span>
-              <span className="value">Eluru, AP, India</span>
+              <span className="value">Hyderabad, TG, India</span>
             </li>
             <li>
               <i className="fas fa-mobile-alt icon"></i>
